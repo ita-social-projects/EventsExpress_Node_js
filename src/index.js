@@ -1,6 +1,7 @@
 const express = require("express");
 const logger = require("morgan");
 const cors = require("cors");
+const { startApp } = require("./databaseSetup");
 
 const testRouter = require("./components/test");
 
@@ -24,4 +25,4 @@ app.use((err, _, res, __) => {
   res.status(status).json(message);
 });
 
-module.exports = app;
+startApp(app);

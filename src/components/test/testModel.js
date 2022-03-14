@@ -1,5 +1,5 @@
 const Sequelize = require("sequelize");
-const db = require("../../databaseSetup");
+const { db } = require("../../databaseSetup");
 const Joi = require("joi");
 
 const { DataTypes } = Sequelize;

@@ -1,6 +1,5 @@
 const express = require("express");
 const { test } = require("./testCtrl");
-// const { validationBody } = require("../middlewares/validation");
 const { modelSchema } = require("./testModel");
 const container = require("../../middlewares/container");
 const router = express.Router();
