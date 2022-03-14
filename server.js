@@ -1,8 +1,6 @@
-const app = require("./app");
-const db = require("./configDB");
-require("dotenv").config();
-
-const { PORT = 3000 } = process.env;
+const app = require("./src");
+const db = require("./src/databaseSetup");
+const { PORT } = require("./src/config");
 
 db.authenticate()
   .then(() => {

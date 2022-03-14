@@ -1,11 +1,11 @@
 const Sequelize = require("sequelize");
-const db = require("../../configDB");
+const db = require("../../databaseSetup");
 const Joi = require("joi");
 
 const { DataTypes } = Sequelize;
 
 const Test = db.define(
-  "tests",
+  "Tests",
   {
     test: {
       type: DataTypes.STRING,
@@ -17,8 +17,8 @@ const Test = db.define(
   }
 );
 
-const schemaCreate = Joi.object({
+const modelSchema = Joi.object({
   test: Joi.string().required(),
 });
 
-module.exports = { Test, schemaCreate };
+module.exports = { Test, modelSchema };
