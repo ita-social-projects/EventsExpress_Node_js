@@ -5,7 +5,7 @@ const Joi = require("joi");
 const { DataTypes } = Sequelize;
 
 const Test = db.define(
-  "Tests",
+  "Test",
   {
     test: {
       type: DataTypes.STRING,
