@@ -4,6 +4,7 @@ const cors = require("cors");
 const { startApp } = require("./databaseSetup");
 
 const testRouter = require("./components/test");
+const categoryRouter = require("./routes/categories");
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/test", testRouter);
+app.use("/api/Category", categoryRouter);
 
 app.use((_, res) => {
   res.status(404).json({ message: "Not found" });

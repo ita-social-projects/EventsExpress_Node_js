@@ -6,7 +6,7 @@ const db = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
   dialect: "mysql",
   /* FOR MACOS */
   dialectOptions: {
-    socketPath: "/Applications/MAMP/tmp/mysql/mysql.sock",
+    socketPath: "",
   },
 });
 
