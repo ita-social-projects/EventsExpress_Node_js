@@ -1,16 +1,17 @@
 const Sequelize = require("sequelize");
-const { DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, PORT } = require("./config/config.json");
+const { DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, PORT } = require("./config");
 
 const db = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
   host: DB_HOST,
   dialect: "mysql",
   /* FOR MACOS */
-  dialectOptions: {
-    socketPath: "/Applications/MAMP/tmp/mysql/mysql.sock",
-  },
+//   dialectOptions: {
+//     socketPath: "/Applications/MAMP/tmp/mysql/mysql.sock",
+//   },
 });
 
 const startApp = async (app) => {
+
   db.authenticate()
     .then(() => {
       console.log("Database connection successful");
