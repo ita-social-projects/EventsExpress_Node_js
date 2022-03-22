@@ -1,7 +1,4 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class AuthLocal extends Model {
     /**
@@ -13,15 +10,18 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  AuthLocal.init({
-    email: DataTypes.STRING,
-    accountId: DataTypes.INTEGER,
-    passwordHash: DataTypes.STRING,
-    salt: DataTypes.STRING,
-    emailConfirmed: DataTypes.BOOLEAN
-  }, {
-    sequelize,
-    modelName: 'AuthLocal',
-  });
+  AuthLocal.init(
+    {
+      email: DataTypes.STRING,
+      accountId: DataTypes.INTEGER,
+      passwordHash: DataTypes.STRING,
+      salt: DataTypes.STRING,
+      emailConfirmed: DataTypes.BOOLEAN,
+    },
+    {
+      sequelize,
+      modelName: "AuthLocal",
+    }
+  );
   return AuthLocal;
 };
