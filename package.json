@@ -8,7 +8,7 @@
     "start:dev": "cross-env NODE_ENV=development nodemon src/index.js",
     "lint": "eslint **/*.js",
     "lint:fix": "eslint --fix **/*.js",
-    "test": "Jest"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
