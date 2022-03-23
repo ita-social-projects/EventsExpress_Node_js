@@ -1,5 +1,5 @@
 const express = require("express");
-const container = require("../../middlewares/container");
+const container = require("../middlewares/container");
 const { categories,
      categoriesByGroup,
      createCategory,
@@ -11,10 +11,10 @@ const router = express.Router();
 
 
 router.get("/All", container(categories));
-router.get("/All/{groupId}", container(categoriesByGroup));
+router.get("/All/:groupId", container(categoriesByGroup));
 router.post("/Create", container(createCategory));
 router.post("/Edit", container(editCategory));
-router.post("/Delete/{id}", container(deleteCategory));
+router.post("/Delete/:id", container(deleteCategory));
 
 
 
