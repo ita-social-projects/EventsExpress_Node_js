@@ -1,4 +1,5 @@
 const express = require('express');
+const container = require('../middlewares/container')
 const {
   addUnitOfMeasurings,
   editUnitOfMeasurings,
@@ -9,10 +10,10 @@ const {
 
 const router = express.Router();
 
-router.post('/Create', addUnitOfMeasurings);
-router.patch('/Edit/:id', editUnitOfMeasurings);
-router.delete('/Delete/:id', deleteUnitOfMeasurings);
-router.get('/All', getAllUnitOfMeasurings);
-router.get('/GetById/:id', getUnitOfMeasuringsById);
+router.post('/Create', container(addUnitOfMeasurings));
+router.patch('/Edit/:id', container(editUnitOfMeasurings));
+router.delete('/Delete/:id', container(deleteUnitOfMeasurings));
+router.get('/All', container(getAllUnitOfMeasurings));
+router.get('/GetById/:id', container(getUnitOfMeasuringsById));
 
 module.exports = router;
