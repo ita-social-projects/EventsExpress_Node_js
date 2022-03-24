@@ -23,5 +23,6 @@ module.exports = (sequelize, DataTypes) => {
       modelName: "AuthLocal",
     }
   );
+
   return AuthLocal;
 };
