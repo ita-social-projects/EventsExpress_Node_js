@@ -21,5 +21,6 @@ module.exports = (sequelize, DataTypes) => {
       modelName: "AuthExternal",
     }
   );
+
   return AuthExternal;
 };
