@@ -5,35 +5,35 @@ module.exports = {
    
       await queryInterface.bulkInsert('Categories', [{
        name: 'Drawing',
-       categoryGroupId: 4
+       categoryGroupId: 1
      },
      {
       name: 'Pottery',
-      categoryGroupId: 4
+      categoryGroupId: 1
     },
      {
       name: 'Self-education',
-      categoryGroupId: 5
+      categoryGroupId: 2
     },
     {
       name: 'Public Speaking',
-      categoryGroupId: 5
+      categoryGroupId: 2
     },
     {
       name: 'Book Club',
-      categoryGroupId: 5
+      categoryGroupId: 2
     },
     {
       name: 'Climbing',
-      categoryGroupId: 6
+      categoryGroupId: 3
     },
     {
       name: 'Volleyball',
-      categoryGroupId: 6
+      categoryGroupId: 3
     },
     {
       name: 'Football',
-      categoryGroupId: 6
+      categoryGroupId: 3
     }], {});
     
   },
