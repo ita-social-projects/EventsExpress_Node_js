@@ -5,7 +5,7 @@ const { startApp } = require("./databaseSetup");
 const ourLogger = require("./logger");
 
 const testRouter = require("./components/test");
-const adminContactsRoutes = require("./routes/index");
+const adminContactsRoutes = require("./routes/contactAdmins");
 
 const app = express();
 
@@ -14,10 +14,10 @@ const formatsLogger = app.get("env") === "development" ? "dev" : "short";
 app.use(logger(formatsLogger));
 app.use(cors());
 app.use(express.json());
-app.use('/api/contactAdmin', adminContactsRoutes);
 app.use(ourLogger());
 
 app.use("/api/test", testRouter);
+app.use('/api/ContactAdmin', adminContactsRoutes);
 
 app.use((_, res) => {
   res.status(404).json({ message: "Not found" });
