@@ -2,6 +2,7 @@ const express = require("express");
 const logger = require("morgan");
 const cors = require("cors");
 const { startApp } = require("./databaseSetup");
+const ourLogger = require("./logger");
 
 const testRouter = require("./components/test");
 const adminContactsRoutes = require("./routes/index");
@@ -14,6 +15,8 @@ app.use(logger(formatsLogger));
 app.use(cors());
 app.use(express.json());
 app.use('/api/contactAdmin', adminContactsRoutes);
+app.use(ourLogger());
+
 app.use("/api/test", testRouter);
 
 app.use((_, res) => {
