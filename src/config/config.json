@@ -1,9 +1,15 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "root",
     "database": "EventsExpress",
     "host": "localhost",
+=======
+    "password": "usbw",
+    "database": "database_development",
+    "host": "127.0.0.1",
+>>>>>>> main
     "dialect": "mysql"
   },
   "test": {
