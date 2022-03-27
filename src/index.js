@@ -5,11 +5,8 @@ const { startApp } = require("./databaseSetup");
 const ourLogger = require("./logger");
 
 const testRouter = require("./components/test");
-<<<<<<< HEAD
 const adminContactsRoutes = require("./routes/contactAdmins");
-=======
 const eventsRouter = require('./routes/events');
->>>>>>> main
 
 const app = express();
 
@@ -21,11 +18,8 @@ app.use(express.json());
 app.use(ourLogger());
 
 app.use("/api/test", testRouter);
-<<<<<<< HEAD
 app.use('/api/ContactAdmin', adminContactsRoutes);
-=======
 app.use('/api/events', eventsRouter);
->>>>>>> main
 
 app.use((_, res) => {
   res.status(404).json({ message: "Not found" });
