@@ -1,6 +1,6 @@
-const express = require ("express");
-const  logger = require ( "morgan");
-const  cors = require ("cors");
+const express = require("express");
+const logger = require("morgan");
+const  cors = require("cors");
 const { startApp } = require("./databaseSetup");
 const ourLogger = require("./logger");
 

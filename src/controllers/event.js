@@ -4,7 +4,7 @@ const {DataTypes} = require ('sequelize');
 
 const Events = createModal(db, DataTypes);
 
-const getAllEvents = async (req, res) => {
+export const getAllEvents = async (req, res) => {
     try {
         const events = await Events.findAll();
         res.json(events);
@@ -12,5 +12,3 @@ const getAllEvents = async (req, res) => {
         res.json({ message: error.message });
     }  
 }
-
-module.exports = getAllEvents;

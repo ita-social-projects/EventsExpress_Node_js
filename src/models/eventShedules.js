@@ -2,7 +2,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class eventShedules extends Model {
+  class EventShedules extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   };
-  eventShedules.init({
+  EventShedules.init({
     id: DataTypes.INTEGER,
     frequency: DataTypes.INTEGER,
     lastRun: DataTypes.INTEGER,
@@ -24,5 +24,5 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'eventShedules',
   });
-  return eventShedules;
+  return EventShedules;
 };
