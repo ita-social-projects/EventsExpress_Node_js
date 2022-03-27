@@ -4,6 +4,7 @@ const cors = require("cors");
 const { startApp } = require("./databaseSetup");
 
 const testRouter = require("./components/test");
+const adminContactsRoutes = require("./routes/index");
 
 const app = express();
 
@@ -12,7 +13,7 @@ const formatsLogger = app.get("env") === "development" ? "dev" : "short";
 app.use(logger(formatsLogger));
 app.use(cors());
 app.use(express.json());
-
+app.use('/api/contactAdmin', adminContactsRoutes);
 app.use("/api/test", testRouter);
 
 app.use((_, res) => {
