@@ -12,10 +12,6 @@ const db = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
   host: DB_HOST,
   port: DB_PORT,
   dialect: "mysql",
-  /* FOR MACOS */
-  dialectOptions: {
-    socketPath: "/Applications/MAMP/tmp/mysql/mysql.sock",
-  },
 });
 
 const startApp = async (app) => {

@@ -7,7 +7,7 @@ const { DataTypes } = Sequelize;
 const Test = db.define(
   "Test",
   {
-    test: {
+    Test: {
       type: DataTypes.STRING,
     },
   },
@@ -18,7 +18,7 @@ const Test = db.define(
 );
 
 const modelSchema = Joi.object({
-  test: Joi.string().required(),
+  Test: Joi.string().required(),
 });
 
 module.exports = { Test, modelSchema };
