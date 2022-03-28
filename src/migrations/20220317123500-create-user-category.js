@@ -10,11 +10,10 @@ module.exports = {
       },
       userId: {
         type: Sequelize.INTEGER,
-  // TODO conect foring key
-  //       references: {
-  //         model: "Users",
-  //          key: "id"
-  // },
+         references: {
+          model: "Users",
+           key: "id"
+  },
       },
       caregoryId: {
         type: Sequelize.INTEGER,
