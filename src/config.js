@@ -1,11 +1,11 @@
 require("dotenv").config();
 
 const {
-  DB_NAME,
-  DB_USER,
-  DB_PASSWORD,
+  DB_NAME = "development",
+  DB_USER = "root",
+  DB_PASSWORD = "root",
   PORT = 3000,
-  DB_HOST,
+  DB_HOST = "mysqldb",
   DB_PORT = 3306,
 } = process.env;
 
