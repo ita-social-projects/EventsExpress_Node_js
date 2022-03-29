@@ -5,12 +5,10 @@ const db = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
   host: DB_HOST,
   dialect: "mysql",
   /* FOR MACOS */
-  dialectOptions: {
-    socketPath: "",
-  },
 });
 
 const startApp = async (app) => {
+
   db.authenticate()
     .then(() => {
       console.log("Database connection successful");
