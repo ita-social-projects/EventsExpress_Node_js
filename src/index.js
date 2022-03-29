@@ -5,6 +5,7 @@ const { startApp } = require("./databaseSetup");
 const ourLogger = require("./logger");
 
 const testRouter = require("./components/test");
+const usersRouter = require("./routes/users")
 const categoryRouter = require("./routes/categories");
 const eventsRouter = require('./routes/events');
 const unitofmeasurings = require('./routes/unitofmeasurings.js');
@@ -19,10 +20,10 @@ app.use(express.json());
 app.use(ourLogger());
 
 app.use('/api/UnitOfMeasuring', unitofmeasurings);
-app.use('/api/test', testRouter);
+app.use("/api/test", testRouter);
+app.use("/api/users", usersRouter);
 app.use("/api/Category", categoryRouter);
 app.use('/api/events', eventsRouter);
-
 
 app.use((_, res) => {
   res.status(404).json({ message: 'Not found' });
