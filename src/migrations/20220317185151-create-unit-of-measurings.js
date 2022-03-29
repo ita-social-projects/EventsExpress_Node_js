@@ -1,27 +1,32 @@
  
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('EventCategories', {
+    await queryInterface.createTable('UnitOfMeasurings', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      eventId: {
-        type: Sequelize.INTEGER,
-         references: {
-          model: "Events",
-          key: "id"
-  },
+      unitName: {
+        type: Sequelize.STRING(450),
+        allowNull: true,
       },
-      caregoryId: {
+      shortName: {
+        type: Sequelize.STRING(450),
+        allowNull: true,
+      },
+      isDeleted: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+      },
+      categoryId: {
         type: Sequelize.INTEGER,
         allowNull: false,
-		    references: {
-		      	model: "Categories",
-		       	key: "id"
-		},
+        references: {
+          model: "CategoriesOfMeasurings",
+          key: "id"
+        },
       },
       createdAt: {
         allowNull: false,
@@ -34,6 +39,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('EventCategories');
+    await queryInterface.dropTable('UnitOfMeasurings');
   }
 };
