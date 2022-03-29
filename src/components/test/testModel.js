@@ -7,20 +7,18 @@ const { DataTypes } = Sequelize;
 const Test = db.define(
   "Test",
   {
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true
-  },
+    Test: {
+      type: DataTypes.STRING,
+    },
   },
   {
     timestamps: false,
     freezeTableName: true,
-
   }
 );
 
 const modelSchema = Joi.object({
-  test: Joi.string().required(),
+  Test: Joi.string().required(),
 });
 
 module.exports = { Test, modelSchema };

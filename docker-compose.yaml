@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  mysqldb:
+    image: mysql
+    restart: unless-stopped
+    env_file: ./.env
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=mern_db
+    volumes:
+      - db:/var/lib/mysql
+  app:
+    build: .
+    depends_on:
+      - mysqldb
+    restart: unless-stopped
+    env_file: ./.env
+    stdin_open: true
+    tty: true
+    ports:
+      - "3000:3000"
+volumes:
+  db:
