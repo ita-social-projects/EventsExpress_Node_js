@@ -7,13 +7,15 @@ const { DataTypes } = Sequelize;
 const Test = db.define(
   "Test",
   {
-    test: {
-      type: DataTypes.STRING,
-    },
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true
+  },
   },
   {
     timestamps: false,
     freezeTableName: true,
+
   }
 );
 

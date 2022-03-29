@@ -7,7 +7,8 @@
     "start": "cross-env NODE_ENV=production node src/index.js",
     "start:dev": "cross-env NODE_ENV=development nodemon src/index.js",
     "lint": "eslint **/*.js",
-    "lint:fix": "eslint --fix **/*.js"
+    "lint:fix": "eslint --fix **/*.js",
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
     "eslint-plugin-import": "2.25.3",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "5.2.0",
+    "jest": "^27.5.1",
     "nodemon": "2.0.15",
     "sequelize-cli": "^6.4.1"
   }
