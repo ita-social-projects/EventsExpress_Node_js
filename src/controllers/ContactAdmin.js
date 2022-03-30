@@ -1,8 +1,8 @@
-const createModel = require("../models/ContactAdmin");
+const createAdminModel = require("../models/contactadmin");
 const { db } = require("../databaseSetup");
 const { DataTypes } = require("sequelize");
 
-const ContactAdmin = createModel(db, DataTypes);
+const ContactAdmin = createAdminModel(db, DataTypes);
 
 const getAdmins = async (req, res) => {
   const admins = await ContactAdmin.findAll();
@@ -12,19 +12,19 @@ const getAdmins = async (req, res) => {
 const getAdminById = async (req, res) => {
   const admin = await ContactAdmin.findAll({
     where: {
-        id: req.params.id
+        messageId: req.params.id
     }
 });
-  res.json({ admin });
+  res.json(admin);
 };
 
 const editAdmin = async (req, res) => {
-const admin = await ContactAdmin.update(req.body, {
+   await ContactAdmin.update(req.status, {
     where: {
-        id: req.params.id
+      messageId: req.params.id
     }
 });
-  res.json({ admin });
+  res.json({ message: 'Status edited' });
     };
 
 module.exports = {getAdmins, getAdminById, editAdmin } ;

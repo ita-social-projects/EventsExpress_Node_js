@@ -8,21 +8,21 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       senderId: {
-        references: {
-          model: "Users",
-          key: "id"
-        },
         type: Sequelize.INTEGER
       },
       asigneeId: {
-        references: {
-          model: "Users",
-          key: "id"
-        },
         type: Sequelize.INTEGER
       },
       email: {
         type: Sequelize.STRING
+      },
+      categoryGroupId: {
+        type: Sequelize.STRING,
+        allowNull: false,
+		    references: {
+		      	model: "Message",
+		       	key: "id"
+		    },
       },
       subject: {
         type: Sequelize.INTEGER

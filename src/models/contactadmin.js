@@ -1,4 +1,3 @@
-'use strict';
 const {
   Model
 } = require('sequelize');
@@ -17,6 +16,7 @@ module.exports = (sequelize, DataTypes) => {
     senderId: DataTypes.INTEGER,
     asigneeId: DataTypes.INTEGER,
     email: DataTypes.STRING,
+    messageId: DataTypes.STRING,
     subject: DataTypes.INTEGER,
     title: DataTypes.STRING,
     emailBody: DataTypes.STRING,
