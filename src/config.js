@@ -1,7 +1,7 @@
 require("dotenv").config();
 
 const {
-  DB_NAME = "development",
+  DB_NAME = "database_development",
   DB_USER = "root",
   DB_PASSWORD = "root",
   PORT = 3000,
