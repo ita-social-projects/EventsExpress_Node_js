@@ -19,6 +19,7 @@ const getUserById = async (req, res) => {
 	  res.json(user[0]);
 	
 };
+
 const editUsername = async (req, res) => {
 	  await Users.update({name: req.query.name}, {
 		where: {
@@ -31,4 +32,27 @@ const editUsername = async (req, res) => {
 
 };
 
-module.exports = { getUsers, getUserById, editUsername, /* addUser, deleteUser */ }
+const addUser = async (req, res) => {
+	try{
+		await Users.create(req.query);
+		res.json({
+			message: 'User created',
+		});
+	}
+	catch (error) {
+		console.log(error);
+	}
+};
+
+const deleteUser = async (req, res) => {
+    await Users.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.json({
+      message: 'User deleted',
+    });
+};
+
+module.exports = { getUsers, getUserById, editUsername, addUser, deleteUser }
