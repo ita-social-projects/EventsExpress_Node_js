@@ -15,9 +15,8 @@ const getAdminById = async (req, res) => {
       messageId: req.params.messageId,
     },
   });
-  console.log(admin);
   if (!admin) {
-    return res.status(404).json({message: "Not found"}) ;
+    return res.status(404).json({ message: "Not found" }) ;
   }
   res.json(admin);
 };
