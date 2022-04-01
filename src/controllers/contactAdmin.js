@@ -17,7 +17,7 @@ const getAdminById = async (req, res) => {
   });
   console.log(admin);
   if (!admin) {
-    return res.status(404).json( {message: "Not found id"}) ;
+    return res.status(404).json({message: "Not found"}) ;
   }
   res.json(admin);
 };
