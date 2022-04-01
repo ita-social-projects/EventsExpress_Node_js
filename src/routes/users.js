@@ -5,7 +5,7 @@ const { getUsers, getUserById,  editUsername, addUser, deleteUser  } = require("
 const router = express.Router();
 router.get('/', container(getUsers))
 router.get('/GetUserProfileById/:id', container(getUserById));
-router.post('/AddUser', addUser);
+router.post('/AddUser', container(addUser));
 router.patch('/EditUsername/:id', container(editUsername));
 router.delete('/DeleteUser/:id', container(deleteUser));
 
