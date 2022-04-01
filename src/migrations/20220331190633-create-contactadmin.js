@@ -14,7 +14,7 @@ module.exports = {
       asigneeId: {
         type: Sequelize.INTEGER
       },
-      messageID: {
+      messageId: {
         type: Sequelize.INTEGER,
         allowNull: false,
 		    references: {

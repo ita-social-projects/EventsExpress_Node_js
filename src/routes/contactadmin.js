@@ -5,7 +5,7 @@ const container = require("../middlewares/container")
 const router = express.Router();
  
 router.get('/All', container(getAdmins));
-router.get('/:messageID', container(getAdminById));
-router.patch('/:messageID/UpdateStatus', container(editAdmin));
+router.get('/:messageId', container(getAdminById));
+router.patch('/:messageId/UpdateStatus', container(editAdmin));
 
 module.exports = router;

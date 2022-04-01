@@ -16,7 +16,7 @@ const {
       senderId: DataTypes.INTEGER,
       asigneeId: DataTypes.INTEGER,
       email: DataTypes.STRING,
-      messageID: DataTypes.INTEGER,
+      messageId: DataTypes.INTEGER,
       subject: DataTypes.INTEGER,
       title: DataTypes.STRING,
       emailBody: DataTypes.STRING,
