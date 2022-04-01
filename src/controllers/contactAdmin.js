@@ -1,4 +1,4 @@
-const createAdminModel = require("../models/contactadmin");
+const createAdminModel = require("../models/contactAdmin");
 const { db } = require("../databaseSetup");
 const { DataTypes } = require("sequelize");
 
@@ -15,14 +15,14 @@ const getAdminById = async (req, res) => {
       messageId: req.params.messageId,
     },
   });
+  console.log(admin);
   if (!admin) {
-    return res.status(404);
+    return res.status(404).json( {message: "Not found id"}) ;
   }
   res.json(admin);
 };
 
 const editAdmin = async (req, res) => {
-  console.log(req.body);
   await ContactAdmin.update(
     { status: req.query.status },
     {

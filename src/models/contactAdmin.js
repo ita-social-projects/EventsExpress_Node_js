@@ -26,7 +26,7 @@ const {
       status: DataTypes.INTEGER
     }, {
       sequelize,
-      modelName: 'contactadmins',
+      modelName: 'contactAdmin',
     });
     return ContactAdmin;
   };

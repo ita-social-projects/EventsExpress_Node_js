@@ -1,5 +1,5 @@
 const express = require("express");
-const { getAdmins, getAdminById, editAdmin } = require("../controllers/contactadmin");
+const { getAdmins, getAdminById, editAdmin } = require("../controllers/contactAdmin");
 const container = require("../middlewares/container")
  
 const router = express.Router();

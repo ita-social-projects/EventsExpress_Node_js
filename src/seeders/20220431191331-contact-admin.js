@@ -1,10 +1,10 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert("contactadmins", [
+    return queryInterface.bulkInsert("contactAdmins", [
       {
         senderId: 1234,
         asigneeId: 35467,
-        messageId: 2,
+        messageId: 10,
         email: "meriv@gmail.com",
         subject: 3,
         title: "Contact me",
@@ -19,7 +19,7 @@ module.exports = {
       {
         senderId: 1234,
         asigneeId: 35467,
-        messageId: 3,
+        messageId: 11,
         email: "jannetrmstrong@gmail.com",
         subject: 3,
         title: "Contact me, if u have questions",
@@ -34,7 +34,7 @@ module.exports = {
       {
         senderId: 1234,
         asigneeId: 35467,
-        messageId: 4,
+        messageId: 12,
         email: "johnrmstrong@gmail.com",
         subject: 3,
         title: "Contact me, if u have questions",
@@ -49,6 +49,6 @@ module.exports = {
     ]);
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete("contactadmins", null, {});
+    return queryInterface.bulkDelete("contactAdmins", null, {});
   },
 };
