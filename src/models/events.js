@@ -1,6 +1,4 @@
-const {
-  Model
-} = require('sequelize');
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Events extends Model {
     /**
@@ -11,21 +9,23 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
     }
-  };
-  Events.init({
-  id: {type: DataTypes.INTEGER,
-  primaryKey:true},
-    title: DataTypes.CHAR,
-    description: DataTypes.TEXT,
-    dateFrom: DataTypes.DATE,
-    dateTo: DataTypes.DATE,
-    maxParticipants: DataTypes.INTEGER,
-    isPublic: DataTypes.BOOLEAN,
-    eventLocationId: DataTypes.INTEGER,
-    eventAudienceId: DataTypes.INTEGER
-  }, {
-    sequelize,
-    modelName: 'events',
-  });
+  }
+  Events.init(
+    {
+      id: { type: DataTypes.INTEGER, primaryKey: true },
+      title: DataTypes.CHAR,
+      description: DataTypes.TEXT,
+      dateFrom: DataTypes.DATE,
+      dateTo: DataTypes.DATE,
+      maxParticipants: DataTypes.INTEGER,
+      isPublic: DataTypes.BOOLEAN,
+      eventLocationId: DataTypes.INTEGER,
+      eventAudienceId: DataTypes.INTEGER,
+    },
+    {
+      sequelize,
+      modelName: "events",
+    }
+  );
   return Events;
 };
