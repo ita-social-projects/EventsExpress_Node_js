@@ -16,8 +16,19 @@ const getEventsById = async (req, res) => {
   });
   res.json(events[0]);
 };
+const editEvents = async (req, res) => {
+  console.log(req.body);
+  await Events.update(req.body, {
+  where: {
+    id: req.params.id,
+  },
+});
+res.json({
+  message: 'UnitOfMeasurings Edited',
+});
+};
 const addEvents = async (req, res) => {
-  await Events.create(req.body);
+  await Events.create(req.body, req.body);
   res.json({
     message: "Events Created",
   });
@@ -38,4 +49,5 @@ module.exports = {
   getEventsById,
   addEvents,
   deleteEvents,
+  editEvents,
 };
