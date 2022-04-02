@@ -17,15 +17,14 @@ const getEventsById = async (req, res) => {
   res.json(events[0]);
 };
 const editEvents = async (req, res) => {
-  console.log(req.body);
-  await Events.update(req.body, {
+  await Events.update(req.query, {
   where: {
     id: req.params.id,
   },
 });
-res.json({
-  message: 'UnitOfMeasurings Edited',
-});
+  res.json({
+    message: 'Events Edited',
+  });
 };
 const addEvents = async (req, res) => {
   await Events.create(req.body, req.body);
