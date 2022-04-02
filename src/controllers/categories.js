@@ -22,17 +22,15 @@ const categoriesByGroup = async (req, res) => {
   res.status(201).json(result);
 };
 
-
-// TODO feat controllers
 const createCategory = async (req, res) => {
     
-  const result = await Category.create(req.body);
+  const result = await Category.create(req.query);
   res.status(201).json(result);
     
 };
 
 const editCategory = async (req, res) => {
-const result = await Category.update(req.body, {
+const result = await Category.update(req.query, {
     where: {
         id: req.params.id
     }

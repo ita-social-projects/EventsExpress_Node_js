@@ -13,7 +13,7 @@ const router = express.Router();
 router.get("/All", container(categories));
 router.get("/All/:groupId", container(categoriesByGroup));
 router.post("/Create", container(createCategory));
-router.post("/Edit", container(editCategory));
+router.post("/Edit/:idg", container(editCategory));
 router.post("/Delete/:id", container(deleteCategory));
 
 
