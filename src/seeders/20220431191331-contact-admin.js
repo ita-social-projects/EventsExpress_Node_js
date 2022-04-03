@@ -4,7 +4,7 @@ module.exports = {
       {
         senderId: 1234,
         asigneeId: 35467,
-        messageId: 10,
+        messageId: 1,
         email: "meriv@gmail.com",
         subject: 3,
         title: "Contact me",
@@ -19,7 +19,7 @@ module.exports = {
       {
         senderId: 1234,
         asigneeId: 35467,
-        messageId: 11,
+        messageId: 2,
         email: "jannetrmstrong@gmail.com",
         subject: 3,
         title: "Contact me, if u have questions",
@@ -34,7 +34,7 @@ module.exports = {
       {
         senderId: 1234,
         asigneeId: 35467,
-        messageId: 12,
+        messageId: 3,
         email: "johnrmstrong@gmail.com",
         subject: 3,
         title: "Contact me, if u have questions",
