@@ -33,7 +33,7 @@ const editUsername = async (req, res) => {
 };
 
 const addUser = async (req, res) => {
-	await Users.create(req.query);
+	await Users.create(req.body);
 	res.json({
 		message: 'User created',
 	});

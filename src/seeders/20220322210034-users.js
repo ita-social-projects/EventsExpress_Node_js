@@ -66,7 +66,7 @@ module.exports = {
 		},
 		{
 		  name: "Vadym Kharyton",
-		  email: "kharyton.vyhnan@gmail.com",
+		  email: "kharyton@gmail.com",
 		  phone: "+380662990028",
 		  birthday: "2000-03-09",
 		  gender: false,
