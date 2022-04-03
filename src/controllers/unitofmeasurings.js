@@ -11,12 +11,12 @@ const getAllUnitOfMeasurings = async (req, res) => {
 };
 
 const getUnitOfMeasuringsById = async (req, res) => {
-  const unitOfMeasuring = await UnitOfMeasurings.findAll({
+  const unitOfMeasuring = await UnitOfMeasurings.findOne({
     where: {
       id: req.params.id,
     },
   });
-  res.json(unitOfMeasuring[0]);
+  res.json(unitOfMeasuring);
 };
 
 const addUnitOfMeasurings = async (req, res) => {
