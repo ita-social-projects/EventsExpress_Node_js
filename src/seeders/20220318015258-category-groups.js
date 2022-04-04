@@ -1,23 +1,23 @@
-'use strict';
-
 module.exports = {
-  async up (queryInterface, Sequelize) {
-    
-     await queryInterface.bulkInsert('CategoryGroups', [{
-        title: 'ArtAndCraftGroup',        
+  up: (queryInterface, Sequelize) => {
+     return queryInterface.bulkInsert('CategoryGroups', [{
+        title: 'ArtAndCraftGroup',    
+		createdAt: new Date(),
+		updatedAt: new Date(),    
         },
         {
-          title: 'EducationAndTraining',        
+          title: 'EducationAndTraining', 
+		  createdAt: new Date(),
+		  updatedAt: new Date(),       
         },
         {
-          title: 'WellnessHealthAndFitness',        
-        }], {});
-    
+          title: 'WellnessHealthAndFitness',
+		  createdAt: new Date(),
+		  updatedAt: new Date(),        
+        }], {});  
   },
 
-  async down (queryInterface, Sequelize) {
+  down: (queryInterface, Sequelize) => 
+    queryInterface.bulkDelete('CategoryGroups', null, {}), 
   
-   await queryInterface.bulkDelete('CategoryGroups', null, {});
-     
-  }
 };

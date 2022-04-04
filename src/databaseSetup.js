@@ -17,13 +17,13 @@ const db = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
 const startApp = async (app) => {
   db.authenticate()
     .then(() => {
-      console.log("Database connection successful");
+      console.log('Database connection successful');
       app.listen(PORT, () => {
         console.log(`Server running. Use our API on port: ${PORT}`);
       });
     })
     .catch((err) => {
-      console.log("Error with connect to database", err);
+      console.log('Error with connect to database', err);
       process.exit(1);
     });
 };
