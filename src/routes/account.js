@@ -10,13 +10,13 @@ const schemaBlockAndUnBlock = Joi.object({
 
 const router = express.Router();
 
-router.post(
-  "/Block",
+router.patch(
+  "/:userId/block",
   validator.params(schemaBlockAndUnBlock),
   container(blockAccount)
 );
-router.post(
-  "/Unblock",
+router.patch(
+  "/:userId/unblock",
   validator.params(schemaBlockAndUnBlock),
   container(unblockAccount)
 );

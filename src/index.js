@@ -26,7 +26,7 @@ app.use("/api/test", testRouter);
 app.use("/api/users", usersRouter);
 app.use("/api/Category", categoryRouter);
 app.use("/api/events", eventsRouter);
-app.use("/api/Account", accountRouter);
+app.use("/api/account", accountRouter);
 app.use("/api/ContactAdmin", adminContactsRoutes);
 
 app.use((_, res) => {
