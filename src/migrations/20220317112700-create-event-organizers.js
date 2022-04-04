@@ -1,6 +1,6 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('event_organizers', {
+    await queryInterface.createTable('eventorganizers', {
       userId: {
         allowNull: false,
         autoIncrement: true,
@@ -26,6 +26,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('event_organizers');
+    await queryInterface.dropTable('eventorganizers');
   }
 };

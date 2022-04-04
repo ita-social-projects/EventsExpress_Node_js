@@ -1,6 +1,6 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert('event_shedules', [
+    return queryInterface.bulkInsert('eventshedules', [
       {
         frequency: 2,
         lastRun: '2022-03-02 17:30:00',
@@ -85,5 +85,5 @@ module.exports = {
     ])
   },
   down: (queryInterface, Sequelize) =>
-    queryInterface.bulkDelete('event_shedules', null, {}),
+    queryInterface.bulkDelete('eventshedules', null, {}),
 }
