@@ -17,7 +17,7 @@ const getEventsById = async (req, res) => {
   res.json(events[0]);
 };
 const editEvents = async (req, res) => {
-  await Events.update(req.query, {
+  await Events.update(req.body, {
   where: {
     id: req.params.id,
   },
@@ -27,7 +27,7 @@ const editEvents = async (req, res) => {
   });
 };
 const addEvents = async (req, res) => {
-  await Events.create(req.body,);
+  await Events.create(req.body);
   res.json({
     message: "Events Created",
   });
