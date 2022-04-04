@@ -1,6 +1,6 @@
-const createModal = require("../models/events.js");
-const { db } = require("../databaseSetup");
-const { DataTypes } = require("sequelize");
+const createModal = require('../models/events.js');
+const { db } = require('../databaseSetup');
+const { DataTypes } = require('sequelize');
 
 const Events = createModal(db, DataTypes);
 
@@ -9,7 +9,7 @@ const getAllEvents = async (req, res) => {
   res.json(events);
 };
 const getEventsById = async (req, res) => {
-  const events = await Events.findAll({
+  const events = await Events.findOne({
     where: {
       id: req.params.id,
     },
@@ -27,7 +27,7 @@ const editEvents = async (req, res) => {
   });
 };
 const addEvents = async (req, res) => {
-  await Events.create(req.body, req.body);
+  await Events.create(req.body,);
   res.json({
     message: "Events Created",
   });
