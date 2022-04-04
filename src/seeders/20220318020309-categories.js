@@ -1,44 +1,55 @@
- 
-
 module.exports = {
-  async up (queryInterface, Sequelize) {
-   
-      await queryInterface.bulkInsert('Categories', [{
+  up: (queryInterface, Sequelize) => {
+      return queryInterface.bulkInsert('Categories', [{
        name: 'Drawing',
-       categoryGroupId: 1
+       categoryGroupId: 1,
+	   createdAt: new Date(),
+	   updatedAt: new Date(),
      },
      {
       name: 'Pottery',
-      categoryGroupId: 1
+      categoryGroupId: 1,
+	  createdAt: new Date(),
+	  updatedAt: new Date(),
     },
      {
       name: 'Self-education',
-      categoryGroupId: 2
+      categoryGroupId: 2,
+	  createdAt: new Date(),
+	  updatedAt: new Date(),
     },
     {
       name: 'Public Speaking',
-      categoryGroupId: 2
+      categoryGroupId: 2,
+	  createdAt: new Date(),
+	  updatedAt: new Date(),
     },
     {
       name: 'Book Club',
-      categoryGroupId: 2
+      categoryGroupId: 2,
+	  createdAt: new Date(),
+	  updatedAt: new Date(),
     },
     {
       name: 'Climbing',
-      categoryGroupId: 3
+      categoryGroupId: 3,
+	  createdAt: new Date(),
+	  updatedAt: new Date(),
     },
     {
       name: 'Volleyball',
-      categoryGroupId: 3
+      categoryGroupId: 3,
+	  createdAt: new Date(),
+	  updatedAt: new Date(),
     },
     {
       name: 'Football',
-      categoryGroupId: 3
+      categoryGroupId: 3,
+	  createdAt: new Date(),
+	  updatedAt: new Date(),
     }], {});
-    
   },
 
-  async down (queryInterface, Sequelize) {
-        await queryInterface.bulkDelete('Categories', null, {});
-      }
+  down: (queryInterface, Sequelize) => 
+    queryInterface.bulkDelete('Categories', null, {}),
 };

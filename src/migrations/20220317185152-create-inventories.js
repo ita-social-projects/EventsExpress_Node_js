@@ -1,12 +1,11 @@
- 
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Inventories', {
+    await queryInterface.createTable("Inventories", {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       needQuantity: {
         type: Sequelize.FLOAT,
@@ -20,10 +19,10 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         unique: true,
-        // references: {
-        //   model: "Events",
-        //   key: "id"
-        //   }
+        references: {
+          model: "Events",
+          key: "id",
+        },
       },
       unitOfMeasuringId: {
         type: Sequelize.INTEGER,
@@ -31,20 +30,20 @@ module.exports = {
         unique: true,
         references: {
           model: "UnitOfMeasurings",
-          key: "id"
-          }
+          key: "id",
+        },
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Inventories');
-  }
+    await queryInterface.dropTable("Inventories");
+  },
 };

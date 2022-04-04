@@ -1,7 +1,4 @@
- 
-const {
-  Model
-} = require('sequelize');
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class UserEventInventories extends Model {
     /**
@@ -13,14 +10,17 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  UserEventInventories.init({
-    eventId: DataTypes.INTEGER,
-    userId: DataTypes.INTEGER,
-    inventoryId: DataTypes.INTEGER,
-    quantity: DataTypes.INTEGER
-  }, {
-    sequelize,
-    modelName: 'UserEventInventories',
-  });
+  UserEventInventories.init(
+    {
+      eventId: DataTypes.INTEGER,
+      userId: DataTypes.INTEGER,
+      inventoryId: DataTypes.INTEGER,
+      quantity: DataTypes.FLOAT,
+    },
+    {
+      sequelize,
+      modelName: "UserEventInventories",
+    }
+  );
   return UserEventInventories;
 };

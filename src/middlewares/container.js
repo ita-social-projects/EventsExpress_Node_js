@@ -2,7 +2,7 @@ const container = (ctrl) => async (req, res, next) => {
   try {
     await ctrl(req, res);
   } catch (error) {
-    next(error);
+	res.json({ message: error.message });
   }
 };
 
