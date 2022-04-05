@@ -1,6 +1,6 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert("event_locations", [
+    return queryInterface.bulkInsert("eventlocations", [
       {
         point: Sequelize.fn('ST_GeomFromText', 'POINT(52.458415 16.904740)'),
         onlineMeeting: true,
@@ -60,5 +60,5 @@ module.exports = {
     ]);
   },
   down: (queryInterface, Sequelize) =>
-    queryInterface.bulkDelete("event_locations", null, {}),
+    queryInterface.bulkDelete("eventlocations", null, {}),
 };
