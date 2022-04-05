@@ -1,4 +1,4 @@
-const createCategoryModel = require("../models/categories");
+const createCategoryModel = require("eventsexpressdb_bylesia/lib/models/categories");
 const {db} = require ('../databaseSetup');
 const {DataTypes} = require ('sequelize');
 

@@ -1,4 +1,4 @@
-const createModal = require('../models/events.js');
+const createModal = require('eventsexpressdb_bylesia/lib/models/events.js');
 const { db } = require('../databaseSetup');
 const { DataTypes } = require('sequelize');
 

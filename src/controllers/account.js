@@ -1,4 +1,4 @@
-const createUserModel = require("../models/account");
+const createUserModel = require("eventsexpressdb_bylesia/lib/models/account");
 const { DataTypes } = require("sequelize");
 
 const { db } = require("../databaseSetup");
