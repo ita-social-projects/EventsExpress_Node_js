@@ -12,7 +12,6 @@ module.exports = (sequelize, DataTypes) => {
   }
   Account.init(
     {
-      id: DataTypes.INTEGER,
       userId: DataTypes.INTEGER,
       isBlocked: DataTypes.BOOLEAN,
     },
