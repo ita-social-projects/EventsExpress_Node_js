@@ -7,13 +7,12 @@ const Account = createUserModel(db, DataTypes);
 
 const blockAccount = async (req, res) => {
   const { userId } = req.params;
-  console.log(userId);
 
   await Account.update(
     { isBlocked: 1 },
     {
       where: {
-        userId: userId,
+        userId,
       },
     }
   );
@@ -28,7 +27,7 @@ const unblockAccount = async (req, res) => {
     { isBlocked: 0 },
     {
       where: {
-        userId: userId,
+        userId,
       },
     }
   );
