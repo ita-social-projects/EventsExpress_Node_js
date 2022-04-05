@@ -24,27 +24,33 @@ const categoriesByGroup = async (req, res) => {
 
 const createCategory = async (req, res) => {
     
-  const result = await Category.create(req.query);
-  res.status(201).json(result);
+ await Category.create(req.body);
+  res.json({
+    message: 'Category Created',
+  });
     
 };
 
 const editCategory = async (req, res) => {
-const result = await Category.update(req.query, {
+ await Category.update(req.body, {
     where: {
         id: req.params.id
     }
 });
-  res.status(201).json(result);
+res.json({
+  message: 'Category Edited',
+});
     };
 
 const deleteCategory = async (req, res) => {
-    const result = await Category.destroy({
+   await Category.destroy({
     where: {
         id: req.params.id
     }
 });
-  res.status(201).json(result);
+res.json({
+  message: 'Category Deleted',
+});
 };
 
 
