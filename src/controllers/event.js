@@ -14,7 +14,7 @@ const getEventsById = async (req, res) => {
       id: req.params.id,
     },
   });
-  res.json(events[0]);
+  res.json(events);
 };
 const editEvents = async (req, res) => {
   await Events.update(req.body, {
