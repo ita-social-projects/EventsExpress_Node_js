@@ -3,7 +3,7 @@ require("dotenv").config();
 const {
   DB_NAME = "development",
   DB_USER = "root",
-  DB_PASSWORD = "root",
+  DB_PASSWORD = "usbw",
   PORT = 3000,
   DB_HOST = "mysqldb",
   DB_PORT = 3306,
