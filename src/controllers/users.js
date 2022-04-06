@@ -21,7 +21,7 @@ const getUserById = async (req, res) => {
 };
 
 const editUsername = async (req, res) => {
-	  await Users.update({name: req.query.name}, {
+	  await Users.update({name: req.body.name}, {
 		where: {
 		  id: req.params.id,
 		},
