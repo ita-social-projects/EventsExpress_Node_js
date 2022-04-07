@@ -10,7 +10,7 @@
     "lint": "eslint **/*.js",
     "lint:fix": "eslint --fix **/*.js",
     "test": "jest --coverage",
-    "docker:start": "npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all && cross-env NODE_ENV=production node src/index.js"
+    "docker:start": "npm run db-migration && cross-env NODE_ENV=production node src/index.js"
   },
   "repository": {
     "type": "git",
