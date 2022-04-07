@@ -25,7 +25,7 @@ module.exports = {
       eventId: {
         type: Sequelize.INTEGER,
         references: {
-          model: "events",
+          model: "Events",
           key: "id"
         }
       },
@@ -40,6 +40,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('eventshedules');
+    await queryInterface.dropTable('EventEhedules');
   }
 };
