@@ -1,4 +1,4 @@
-version: "3.8"
+version: '3.8'
 
 services:
   mysqldb:
@@ -7,7 +7,7 @@ services:
     env_file: ./.env
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=mern_db
+      - MYSQL_DATABASE=database_development
     volumes:
       - db:/var/lib/mysql
   app:
@@ -19,6 +19,6 @@ services:
     stdin_open: true
     tty: true
     ports:
-      - "3000:3000"
+      - '3000:3000'
 volumes:
   db:
