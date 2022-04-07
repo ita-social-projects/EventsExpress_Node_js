@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     isOnlyForAdults: DataTypes.BOOLEAN
   }, {
     sequelize,
-    modelName: 'eventAudiences',
+    modelName: 'EventAudiences',
   });
   return EventAudiences;
 };

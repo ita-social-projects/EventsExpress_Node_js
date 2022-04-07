@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     eventId: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'eventShedules',
+    modelName: 'EventShedules',
   });
   return EventShedules;
 };

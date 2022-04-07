@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     eventId: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'event_organizers',
+    modelName: 'EventOrganizers',
   });
   return EventOrganizers;
 };

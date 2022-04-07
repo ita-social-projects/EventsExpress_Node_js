@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     type: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'eventLocationts',
+    modelName: 'EventLocationts',
   });
   return EventLocationts;
 };
