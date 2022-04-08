@@ -1,40 +1,40 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert(
-      "categoriesofmeasurings",
+      'CategoriesOfMeasurings',
       [
         {
-          categoryName: "length",
+          categoryName: 'length',
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          categoryName: "time",
+          categoryName: 'time',
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          categoryName: "mass",
+          categoryName: 'mass',
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          categoryName: "electric current",
+          categoryName: 'electric current',
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          categoryName: "temperature",
+          categoryName: 'temperature',
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          categoryName: "intensity",
+          categoryName: 'intensity',
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          categoryName: "number",
+          categoryName: 'number',
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -43,5 +43,5 @@ module.exports = {
     );
   },
   down: (queryInterface, Sequelize) =>
-    queryInterface.bulkDelete("categoriesofmeasurings", null, {}),
+    queryInterface.bulkDelete('CategoriesOfMeasurings', null, {}),
 };
