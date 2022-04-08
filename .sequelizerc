@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   config: path.resolve("src", "config", "config.json"),
-  "migrations-path": path.resolve("src", "migrations"),
-  "models-path": path.resolve("src", "models"),
-  "seeders-path": path.resolve("src", "seeders"),
+  "migrations-path": path.resolve("node_modules", "eventsexpress-database-npm-package", "lib", "migrations"),
+  "models-path": path.resolve("node_modules", "eventsexpress-database-npm-package", "lib", "models"),
+  "seeders-path": path.resolve("node_modules", "eventsexpress-database-npm-package", "lib", "seeders"),
 };

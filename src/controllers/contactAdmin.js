@@ -1,4 +1,4 @@
-const createAdminModel = require("../models/contactAdmin");
+const createAdminModel = require("eventsexpress-database-npm-package/lib/models/contactAdmin");
 const { db } = require("../databaseSetup");
 const { DataTypes } = require("sequelize");
 

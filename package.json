@@ -28,6 +28,7 @@
     "cors": "^2.8.5",
     "cross-env": "^7.0.3",
     "dotenv": "^16.0.0",
+    "eventsexpress-database-npm-package": "^1.0.2",
     "express": "^4.17.3",
     "express-joi-validation": "^5.0.1",
     "joi": "^17.6.0",

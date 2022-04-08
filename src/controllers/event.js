@@ -1,4 +1,4 @@
-const createModal = require('../models/events.js');
+const createModal = require('eventsexpress-database-npm-package/lib/models/events');
 const { db } = require('../databaseSetup');
 const { DataTypes } = require('sequelize');
 

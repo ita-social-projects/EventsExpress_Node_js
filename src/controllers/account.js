@@ -1,4 +1,4 @@
-const createUserModel = require("../models/account");
+const createUserModel = require("eventsexpress-database-npm-package/lib/models/account");
 const { DataTypes } = require("sequelize");
 
 const { db } = require("../databaseSetup");
