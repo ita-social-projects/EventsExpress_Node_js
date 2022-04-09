@@ -33,4 +33,23 @@ const editAdmin = async (req, res) => {
   res.json({ message: "Status edited" });
 };
 
-module.exports = { getAdmins, getAdminById, editAdmin };
+const addContactAdmin = async (req, res) => {
+  console.log(req.body);
+	await ContactAdmin.create(req.body);
+	res.json({
+		message: 'Contact Admin created',
+	});
+};
+
+const deleteContactAdmin = async (req, res) => {
+    await ContactAdmin.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.json({
+      message: 'User deleted',
+    });
+};
+
+module.exports = { getAdmins, getAdminById, editAdmin, addContactAdmin, deleteContactAdmin };
