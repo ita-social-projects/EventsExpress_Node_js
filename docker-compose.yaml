@@ -10,6 +10,8 @@ services:
       - MYSQL_DATABASE=database_development
     volumes:
       - db:/var/lib/mysql
+    ports:
+      - '3306:3306'
   app:
     build: .
     depends_on:
