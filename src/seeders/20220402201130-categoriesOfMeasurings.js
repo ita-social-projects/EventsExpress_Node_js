@@ -4,37 +4,37 @@ module.exports = {
       "categoriesofmeasurings",
       [
         {
-          categoryName: "length",
+          categoryName: "Length",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          categoryName: "time",
+          categoryName: "Time",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          categoryName: "mass",
+          categoryName: "Mass",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          categoryName: "electric current",
+          categoryName: "Electric current",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          categoryName: "temperature",
+          categoryName: "Temperature",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          categoryName: "intensity",
+          categoryName: "Intensity",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          categoryName: "number",
+          categoryName: "Number",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
