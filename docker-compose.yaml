@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.3'
 
 services:
   mysqldb:
@@ -9,7 +9,7 @@ services:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=database_development
     volumes:
-      - db:/var/lib/mysql
+      - db:/var/run/mysql
   app:
     build: .
     depends_on:

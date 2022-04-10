@@ -23,7 +23,7 @@ const getAdminById = async (req, res) => {
 
 const editAdmin = async (req, res) => {
   await ContactAdmin.update(
-    { status: req.query.status },
+    { status: req.body.status },
     {
       where: {
         messageId: req.params.messageId,
@@ -34,7 +34,6 @@ const editAdmin = async (req, res) => {
 };
 
 const addContactAdmin = async (req, res) => {
-  console.log(req.body);
 	await ContactAdmin.create(req.body);
 	res.json({
 		message: 'Contact Admin created',
