@@ -1,7 +1,7 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert(
-      "categoriesofmeasurings",
+      "CategoriesOfMeasurings",
       [
         {
           categoryName: "Length",
@@ -43,5 +43,5 @@ module.exports = {
     );
   },
   down: (queryInterface, Sequelize) =>
-    queryInterface.bulkDelete("categoriesofmeasurings", null, {}),
+    queryInterface.bulkDelete("CategoriesOfMeasurings", null, {}),
 };

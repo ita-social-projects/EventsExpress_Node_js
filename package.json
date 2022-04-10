@@ -6,10 +6,11 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production node src/index.js",
     "start:dev": "cross-env NODE_ENV=development nodemon src/index.js",
-    "db-migration": "cd src/ & npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
+    "db-migration": "npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
     "lint": "eslint **/*.js",
     "lint:fix": "eslint --fix **/*.js",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "docker:start": "npm run db-migration && cross-env NODE_ENV=production node src/index.js"
   },
   "repository": {
     "type": "git",

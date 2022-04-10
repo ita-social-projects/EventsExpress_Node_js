@@ -1,7 +1,6 @@
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('events', {
+    await queryInterface.createTable('Events', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -9,40 +8,40 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       title: {
-        type: Sequelize.TEXT
+        type: Sequelize.TEXT,
       },
       description: {
-        type: Sequelize.TEXT
+        type: Sequelize.TEXT,
       },
       dateFrom: {
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       dateTo: {
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       maxParticipants: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       isPublic: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
       },
       eventLocationId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       eventAudienceId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('events');
-  }
+    await queryInterface.dropTable('Events');
+  },
 };

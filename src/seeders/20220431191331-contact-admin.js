@@ -1,15 +1,15 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert("contactAdmins", [
+    return queryInterface.bulkInsert('ContactAdmins', [
       {
         senderId: 1234,
         asigneeId: 35467,
         messageId: 1,
-        email: "meriv@gmail.com",
+        email: 'meriv@gmail.com',
         subject: 3,
-        title: "Contact me",
-        emailBody: "",
-        resolutionDetails: "",
+        title: 'Contact me',
+        emailBody: '',
+        resolutionDetails: '',
         dateCreated: new Date(),
         dateUpdated: new Date(),
         status: 2,
@@ -20,11 +20,11 @@ module.exports = {
         senderId: 1234,
         asigneeId: 35467,
         messageId: 2,
-        email: "jannetrmstrong@gmail.com",
+        email: 'jannetrmstrong@gmail.com',
         subject: 3,
-        title: "Contact me, if u have questions",
-        emailBody: "Hello all!",
-        resolutionDetails: "",
+        title: 'Contact me, if u have questions',
+        emailBody: 'Hello all!',
+        resolutionDetails: '',
         dateCreated: new Date(),
         dateUpdated: new Date(),
         status: 2,
@@ -35,11 +35,11 @@ module.exports = {
         senderId: 1234,
         asigneeId: 35467,
         messageId: 3,
-        email: "johnrmstrong@gmail.com",
+        email: 'johnrmstrong@gmail.com',
         subject: 3,
-        title: "Contact me, if u have questions",
-        emailBody: "Hello all!",
-        resolutionDetails: "",
+        title: 'Contact me, if u have questions',
+        emailBody: 'Hello all!',
+        resolutionDetails: '',
         dateCreated: new Date(),
         dateUpdated: new Date(),
         status: 2,
@@ -49,6 +49,6 @@ module.exports = {
     ]);
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete("contactAdmins", null, {});
+    return queryInterface.bulkDelete('ContactAdmins', null, {});
   },
 };

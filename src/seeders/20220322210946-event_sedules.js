@@ -1,13 +1,13 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert('eventshedules', [
+    return queryInterface.bulkInsert('EventShedules', [
       {
         frequency: 2,
         lastRun: '2022-03-02 17:30:00',
         nextRun: '2022-03-02 17:30:00',
         periodicity: 'monthly',
         isActive: true,
-        eventId: 1 ,
+        eventId: 1,
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -81,9 +81,8 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
-
-    ])
+    ]);
   },
   down: (queryInterface, Sequelize) =>
-    queryInterface.bulkDelete('eventshedules', null, {}),
-}
+    queryInterface.bulkDelete('EventShedules', null, {}),
+};
