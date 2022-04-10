@@ -1,35 +1,35 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert(
-      'UnitOfMeasurings',
+      "UnitOfMeasurings",
       [
         {
-          unitName: 'meter',
-          shortName: 'm',
+          unitName: "Meter",
+          shortName: "M",
           isDeleted: false,
           categoryId: 1,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          unitName: 'second',
-          shortName: 's',
+          unitName: "Second",
+          shortName: "S",
           isDeleted: false,
           categoryId: 2,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          unitName: 'kilogram',
-          shortName: 'kg',
+          unitName: "Kilogram",
+          shortName: "Kg",
           isDeleted: false,
           categoryId: 3,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          unitName: 'ampere',
-          shortName: 'a',
+          unitName: "Ampere",
+          shortName: "A",
           isDeleted: false,
           categoryId: 4,
           createdAt: new Date(),
@@ -41,6 +41,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.bulkDelete('UnitOfMeasurings', null, {});
+    await queryInterface.bulkDelete("UnitOfMeasurings", null, {});
   },
 };

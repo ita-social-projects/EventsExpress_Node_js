@@ -1,9 +1,9 @@
-const createUserModel = require("../models/unitofmeasurings.js");
+const createUnitOfMeasurings = require("../models/unitofmeasurings.js");
 
 const { DataTypes } = require("sequelize");
 const { db } = require("../databaseSetup");
 
-const UnitOfMeasurings = createUserModel(db, DataTypes);
+const UnitOfMeasurings = createUnitOfMeasurings(db, DataTypes);
 
 const getAllUnitOfMeasurings = async (req, res) => {
   const unitOfMeasurings = await UnitOfMeasurings.findAll();
